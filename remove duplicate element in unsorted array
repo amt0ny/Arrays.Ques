@@ -1,0 +1,23 @@
+        int arr[] = {3,12,4,2,9,2,7,5,2,1};
+       int count  = 0;
+        int max = 0;
+        for (int i = 0;i<arr.length;i++){
+
+            for (int j = i+1; j<arr.length-1;j++){
+                if (arr[i] == arr[j]){
+                    arr[j] = arr[j+1];
+                    count++;
+                }
+                if (count > max){
+                   max = count;
+                }
+
+            }
+            count=0;
+        }
+        System.out.println( max);
+
+        int arr2 [] = new int[arr.length];
+        for (int i = 0;i< arr2.length-max;i++){
+            System.out.println(arr[i]);
+        }
