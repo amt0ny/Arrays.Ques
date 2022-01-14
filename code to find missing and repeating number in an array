@@ -1,0 +1,50 @@
+    public static int max(int arr[]){
+        int max = arr[0];
+        for (int i = 0;i<arr.length;i++){
+            if (max < arr[i]){
+                max = arr[i];
+            }
+        }
+        return max;
+    }
+    public static int min(int arr[]){
+        int min = arr[0];
+        for (int i = 0;i<arr.length;i++){
+            if (min > arr[i]){
+                min = arr[i];
+            }
+        }
+        return min;
+    }
+    public static void main(String[] args) {
+        int arr[] = {3,1,2,5,3};
+        int min = min(arr);
+        int max = max(arr);
+        boolean bl = false;
+        int count = 0;
+        for (int i = min;i<=max;i++) {
+            for (int j = 0; j < arr.length; j++) {
+                if (arr[j] == i) {
+                    count++;
+
+                } else if (count == 0 && j == arr.length - 1) {
+                    System.out.print("Missing number is : ");
+                    System.out.println(i);
+                }
+            }
+            count = 0;
+        }
+        int count1 = 0;
+        for (int i = 0;i<arr.length;i++){
+            for (int j = i;j<arr.length;j++){
+                if (arr[i] == arr[j]){
+                    count1++;
+                    if(count1 > 1){
+                        System.out.print("Repeating number : ");
+                        System.out.println(arr[i]);
+                    }
+                }
+            }
+            count1 =0;
+        }
+}
