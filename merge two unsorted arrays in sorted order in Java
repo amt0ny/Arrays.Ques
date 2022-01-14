@@ -1,0 +1,29 @@
+    public static void main(String[] args) {
+        int arr[] = {2,5,4,7,3,8};
+        int arr2[] = {3,2,9,1,3,2};
+        Arrays.sort(arr);
+        Arrays.sort(arr2);
+
+        System.out.println();
+        int merge[] = new int[arr.length+arr2.length];
+        int index1 = 0;
+        int index2 = 0;
+        int mergeindex = 0;
+        while (index1 < arr.length && index2 < arr2.length){//234
+        if(arr[index1] <= arr2[index2]){//123
+            merge[mergeindex] = arr[index1];
+            mergeindex++;
+            index1++;
+        }
+        else{
+            merge[mergeindex] = arr2[index2];
+            mergeindex++;
+            index2++;
+        }
+        }
+
+        for (int i = 0;i<merge.length-1;i++){
+            System.out.print(merge[i]);
+        }
+
+    }
