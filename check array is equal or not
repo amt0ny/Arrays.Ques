@@ -1,0 +1,5 @@
+    public static void main(String[] args) {
+        int arr[] = {2,5,3,7,9,1};
+        int arr2[] = {2,5,3,7,9,1};
+        System.out.println(Arrays.equals(arr2, arr));
+    }
