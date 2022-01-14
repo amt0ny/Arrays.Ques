@@ -1,0 +1,14 @@
+        int ary[] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+        Scanner sc = new Scanner(System.in);
+        int rotate = sc.nextInt();
+
+        for (int i = 0;i<=rotate-1;i++) {
+            int first = ary[0];
+            for (int j = 0; j < ary.length - 1; j++) {
+                ary[j] = ary[j + 1];
+            }
+            ary[ary.length - 1] = first;
+        }
+        for (int j = 0; j < ary.length; j++) {
+            System.out.println(ary[j]);
+        }
